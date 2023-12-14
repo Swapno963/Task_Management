@@ -4,7 +4,7 @@ from category.models import CategoryModel
 class TaskModel(models.Model):
     taskTitle = models.CharField(max_length=100)
     taskDescription= models.TextField()
-    is_completed = models.BooleanField()
+    is_completed = models.BooleanField(default=False)
     taskDate = models.DateField( auto_now=False, auto_now_add=False)
     category = models.ManyToManyField(CategoryModel)
 
